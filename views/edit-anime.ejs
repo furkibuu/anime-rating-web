@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/logo/logo1.png" type="image/x-icon">
+    <title>Edit Anime</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Edit Anime</h1>
+        </div>
+    </header>
+
+    <main>
+        <form action="/admin/edit/<%= anime.id %>" method="POST" class="admin-form">
+            <label for="title">Anime Title</label>
+            <input type="text" name="title" id="title" value="<%= anime.title %>" required>
+
+            <label for="rating">Rating</label>
+            <input type="number" name="rating" id="rating" step="0.1" max="5" value="<%= anime.rating %>" required>
+
+            <label for="review">Review</label>
+            <textarea name="review" id="review" required><%= anime.review %></textarea>
+
+            <label for="image">Image URL</label>
+            <input type="text" name="image" id="image" value="<%= anime.image %>" required>
+
+            <button type="submit">Update Anime</button>
+        </form>
+    </main>
+</body>
+</html>

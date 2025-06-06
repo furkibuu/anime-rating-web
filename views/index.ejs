@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime List</title>
+  <link rel="shortcut icon" href="/logo/logo1.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/style.css">
+
+  
+</head>
+<body>
+    <%- include('partials/header') %>
+  
+    <div class="search-form">
+        <input type="text" placeholder="Search anime...">
+        <button type="button">Search</button>
+      </div>
+  
+      <!-- Anime List -->
+      <ul class="anime-list">
+        <% animes.forEach(anime => { %>
+          <li>
+            <img src="<%= anime.image %>" alt="<%= anime.title %>" class="anime-image">
+            <div>
+              <h2><%= anime.title %></h2>
+              <p>Rating: <%= anime.rating %></p>
+              <p><%= anime.review %></p>
+              <a href="/anime/<%= anime.id %>">View Details</a>
+            </div>
+          </li>
+        <% }) %>
+      </ul>
+    </main>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

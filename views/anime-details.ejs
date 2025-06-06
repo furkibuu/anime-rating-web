@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="/logo/logo1.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= anime.title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/anime-details.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+  <main>
+    
+    <h1><%= anime.title %> </h1>
+    <div class="details">
+      <br>
+    <img src="<%= anime.image %>" alt="<%= anime.title %>" class="anime-image">
+
+    <h3>Rating: <%= anime.rating %></h3>
+    <h4><%= anime.review %></h4>
+    <a href="/">Back to Home</a>
+    
+    <br>
+  </div>
+  </main>
+  <%- include('partials/footer') %>
+</body>
+</html>

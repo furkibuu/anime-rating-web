@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/logo/logo1.png" type="image/x-icon">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+  <main>
+    <h2>Manage Anime List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Rating</th>
+                <th>Review</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% animes.forEach(anime => { %>
+            <tr>
+                <td><%= anime.title %></td>
+                <td><%= anime.rating %></td>
+                <td><%= anime.review %></td>
+                <td>
+                    <a href="/admin/edit/<%= anime.id %>" class="btn btn-edit">Edit</a>
+                    <form action="/admin/delete/<%= anime.id %>" method="POST" style="display: inline;">
+                        <button type="submit" class="btn btn-delete">Delete</button>
+                    </form>
+                </td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+
+    <h2>Add New Anime</h2>
+    <form action="/admin" method="POST" class="admin-form">
+        <label for="title">Anime Title</label>
+        <input type="text" name="title" id="title" required>
+
+        <label for="rating">Rating</label>
+        <input type="number" name="rating" id="rating" step="0.1" max="5" required>
+
+        <label for="review">Review</label>
+        <textarea name="review" id="review" required></textarea>
+
+        <label for="image">Image URL</label>
+        <input type="text" name="image" id="image" required>
+
+        <button type="submit">Add Anime</button>
+    </form>
+</main>
+  <%- include('partials/footer') %>
+</body>
+</html>

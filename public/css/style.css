@@ -1,0 +1,218 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  height: 55px;
+}
+
+nav a {
+  color: #ecf0f1;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #3498db;
+}
+
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.search-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 25px 0 0 25px;
+  width: 250px;
+  outline: none;
+}
+
+.search-form button {
+  padding: 12px 20px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-form button:hover {
+  background-color: #2980b9;
+}
+
+.anime-list {
+  list-style: none;
+  width: 750px;
+  padding: 0;
+  margin-left: 400px;
+}
+
+.anime-list li {
+  background-color: white;
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.anime-list li:hover {
+  transform: translateY(-5px);
+}
+
+.anime-image {
+  width: 120px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 30px;
+}
+
+.anime-list h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #34495e;
+}
+
+.anime-list p {
+  margin: 5px 0;
+  color: #7f8c8d;
+}
+
+.anime-list a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.anime-list a:hover {
+  color: #2980b9;
+}
+
+footer {
+  background-color: #2c3e50;
+  padding: 40px 0;
+  text-align: center;
+  color: #ecf0f1;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.social-media {
+  margin-bottom: 20px;
+}
+
+.social-media a {
+  color: #ecf0f1;
+  margin: 0 15px;
+  font-size: 24px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #3498db;
+  transform: scale(1.2);
+}
+
+.footer-links {
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #bdc3c7;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ecf0f1;
+}
+
+footer p {
+  margin-top: 20px;
+  color: #bdc3c7;
+  font-size: 14px;
+}
+
+/* Font Awesome Icons (for social media logos) */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+  .admin-form, .login-form, .register-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .admin-form label, .login-form label, .register-form label {
+    margin: 10px 0 5px;
+  }
+  
+  .admin-form input, .login-form input, .register-form input, .admin-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .admin-form button, .login-form button, .register-form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  

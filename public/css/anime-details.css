@@ -1,0 +1,41 @@
+.details {
+    background-color: white;
+    list-style: none;
+    width: 750px;
+    padding: 0;
+    margin-left: 240px;
+    border-radius: 30px;
+    text-align: center;
+
+}
+
+.details a {
+
+    display: inline-block;
+    margin-top: 10px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+
+}
+.details a:hover {
+    color: #2980b9;
+}
+
+.details h3 {
+
+color:rgb(3, 3, 3);
+
+}
+
+.details img {
+
+width: 200px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 30px;
+
+
+}
+
